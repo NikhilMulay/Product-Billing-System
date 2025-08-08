@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6e7f, #bfe9ff); /* Soft gradient background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #383838;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            color: #4a4a4a;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: calc(100% - 24px);
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #ff9800; /* Orange focus color */
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #ff5722; /* Deep orange button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #f4511e;
+        }
+
+        .error {
+            color: #e53935;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot-password {
+            margin-top: 30px;
+        }
+
+        .forgot-password a {
+            color: #1e88e5;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+
+        <form action="adminLogin" method="post">
+            <div class="form-group">
+                <label for="adminName">Username:</label>
+                <input type="text" id="adminName" name="adminName" placeholder="Enter username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" name="adminPassword" placeholder="Enter password" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgotten password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
